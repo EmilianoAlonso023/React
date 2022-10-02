@@ -8,8 +8,9 @@ import './App.css';
  import Footer from './components/Footer';
  import { BrowserRouter, Route, Routes } from 'react-router-dom';
  import ItemList from './components/shop/ItemList';
- import ItemDetail from './components/shop/ItemDetail';
  import Error404 from './components/Error404';
+import ItemCard from './components/shop/ItemCard';
+ 
 
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
         <Routes>
           <Route path={'/'} element={<Clicker/>} />
           <Route path={'/shop'} element={<ItemList/>} />
-          <Route path={'/shop/item/:id'} element={<ItemDetail/>} />
+          <Route path={'/shop/item/:id'} element={<ItemCard/>} />
           <Route path={'/shop/itemListContainer/:id'} element={<ItemListContainer/>} />
+          {/* <Route path={'/shop/data/products/:id'} element={<products/>} /> */}
           <Route path={'*'} element={<Error404/>} />
         </Routes>
         <Footer/>  

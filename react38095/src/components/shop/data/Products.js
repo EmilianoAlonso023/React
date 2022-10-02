@@ -1,3 +1,5 @@
+
+
 const products = [
     { id: 1, name:'pc', price:'80000'},
     { id: 2, name:'notebook', price:'120000'},
@@ -6,4 +8,9 @@ const products = [
     { id: 5, name:'xbox', price:'250000'},
 ]
 
-export {products}
+export const getProducts = () => { 
+    return new Promise( (resolve)=>{ 
+        setTimeout( () =>{ 
+            resolve( products ) }, 3000)
+ }) 
+}

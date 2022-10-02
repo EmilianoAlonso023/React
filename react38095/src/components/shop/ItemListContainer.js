@@ -1,4 +1,20 @@
- import ItemList from "./ItemList"
+ import { getProducts } from "./data/Products"
+import ItemList from "./ItemList"
+
+const ItemList = () => {
+
+  const [items, setItems] = useState([])
+
+  useEffect( () =>{
+    getProducts().then( res =>{
+      setItems( res )
+    } )
+    .catch( err => {
+      console.log('err:' + err);
+    })
+  }, [])
+}
+
 
  const ItemListContainer = ( {greeting} ) => {
     return (
