@@ -6,7 +6,10 @@ import './App.css';
  import Clicker from './components/Clicker';
  import ItemListContainer from './components/shop/ItemListContainer'; 
  import Footer from './components/Footer';
-
+ import { BrowserRouter, Route, Routes } from 'react-router-dom';
+ import ItemList from './components/shop/ItemList';
+ import ItemDetail from './components/shop/ItemDetail';
+ import Error404 from './components/Error404';
 
 
 function App() {
@@ -14,26 +17,21 @@ function App() {
   const styles = {padding: '10px'}
   return (
     <>
-    <NavBar/>
-    <Clicker/> 
-   <ItemListContainer greeting='Mi tienda'/> 
+    <BrowserRouter>
+        <NavBar/>
+        
+        <Routes>
+          <Route path={'/'} element={<Clicker/>} />
+          <Route path={'/shop'} element={<ItemList/>} />
+          <Route path={'/shop/item/:id'} element={<ItemDetail/>} />
+          <Route path={'/shop/itemListContainer/:id'} element={<ItemListContainer/>} />
+          <Route path={'*'} element={<Error404/>} />
+        </Routes>
+        <Footer/>  
+      </BrowserRouter>
     
-  {/*    <h1>Hola a todos!!</h1> 
-     <BoxForChildren>
-    <p>Un texto cualquiera</p>
-    </BoxForChildren>  
-    <h2 style={styles}>subtitulo</h2> 
-       <li className='blue'>elemnto1</li>
-      <li>elemnto2</li>
-      <li>elemnto3</li> */}
-
+       
       
-        {/* <Saludo name='Adrian' age={33}/>
-      <Saludo name ='Emiliano' age={33}></Saludo>
-      <Saludo name='Cintia' age={30}></Saludo>
-      <Saludo name='Angeles' age={28}></Saludo>
-      <Saludo name='Ana' age={39}></Saludo>  */}
-      <Footer/>  
     </>
     
   );

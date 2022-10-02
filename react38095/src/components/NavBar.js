@@ -1,8 +1,13 @@
-export const NavBar = () => {
+import { Link } from "react-router-dom"
+
+const NavBar = () => {
     return (
       <div className="navbar bg-base-100">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Inicio</a>
+        <Link to='/' className="btn btn-ghost normal-case text-xl">Inicio</Link>
+      </div>
+      <div className="flex-1">
+        <Link to='/shop' className="btn btn-ghost normal-case text-xl">Tienda</Link>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">
