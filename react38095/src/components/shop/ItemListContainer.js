@@ -1,7 +1,7 @@
- import { getProducts } from "./data/Products"
+ /* import { getProducts } from "./data/Products" */
 import ItemList from "./ItemList"
+import { useEffect, useState } from "react"
 
-const ItemList = () => {
 
   const [items, setItems] = useState([])
 
@@ -13,7 +13,7 @@ const ItemList = () => {
       console.log('err:' + err);
     })
   }, [])
-}
+
 
 
  const ItemListContainer = ( {greeting} ) => {
