@@ -1,27 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { products } from 'react'  
-
-const ItemDetail = () => {
-
-const { id: itemId } = useParams()
-const [item, setItem] = useState({})
-
-useEffect(() => {
-    getItemsDetail().then( response =>{
-    setItem( response )
-    } )
-  },  [])
+import React from 'react'
 
 
-const getItemsDetail = () => { 
-return new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve ( products.find ( p=> p.id === Number(itemId) ) )
-    }, 1500);
-})
- }
-
+const ItemDetail = ({item}) => {
 
   return (
     <div>
