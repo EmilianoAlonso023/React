@@ -9,6 +9,7 @@ import './App.css';
  import Error404 from './components/Error404';
  import ItemCard from './components/shop/ItemCard'; 
 import ItemDetail from './components/shop/ItemDetail';
+import ItemDetailContainer from './components/shop/ItemDetailContainer';
  
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path={'/'} element={<Clicker/>} />
           <Route path={'/shop'} element={<ItemList/>} />
           <Route path={'/shop/item/:id'} element={<ItemDetail/>} />
+          <Route path={'/item/:id'} element={<ItemDetailContainer/>} />
 {/*       <Route path={'/shop/itemListContainer/:id'} element={<ItemListContainer/>} />
  */}       {/* <Route path={'/shop/data/products/:id'} element={<products/>} /> */}
           <Route path={'*'} element={<Error404/>} />

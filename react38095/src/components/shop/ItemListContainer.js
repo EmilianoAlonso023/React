@@ -1,8 +1,9 @@
- /* import { getProducts } from "./data/Products" */
 import ItemList from "./ItemList"
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
+import { getProducts } from "./data/Products"
 
 
+ const ItemListContainer = ( {greeting} ) => {
   const [items, setItems] = useState([])
 
   useEffect( () =>{
@@ -13,15 +14,11 @@ import { useEffect, useState } from "react"
       console.log('err:' + err);
     })
   }, [])
-
-
-
- const ItemListContainer = ( {greeting} ) => {
     return (
       <div className="m-5">
         <h1>{greeting}</h1>
-        <ItemList/>
+        <ItemList items={items}/>
         </div>
     )
   }
-  export default ItemListContainer  
+  export default ItemListContainer
