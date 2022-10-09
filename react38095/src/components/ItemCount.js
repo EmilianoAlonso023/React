@@ -1,6 +1,7 @@
  import { useEffect, useState } from "react";
+ 
 
-const Clicker = () => {
+const ItemCount = () => {
     const [counter, setCounter] = useState(0)
     useEffect ( () => {
         console.log ('se monto el componente');
@@ -26,4 +27,4 @@ const Clicker = () => {
     </div>
   )
 }
-export default Clicker 
+export default ItemCount 
