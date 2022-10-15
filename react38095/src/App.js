@@ -5,6 +5,7 @@ import './App.css';
  import { BrowserRouter, Route, Routes } from 'react-router-dom';
  import Error404 from './components/Error404';
 import ItemDetailContainer from './components/shop/ItemDetailContainer';
+import InputEvents from './components/InputEvents';
 
  
 
@@ -17,6 +18,7 @@ function App() {
      <BrowserRouter>
         <NavBar/>
         <Routes>
+          <Route path={'/Input'} element={<InputEvents/>} />
           <Route path={'/'} element={<ItemListContainer/>} />
           <Route path={'/category/:id'} element={<ItemListContainer/>} />
           <Route path={'/item/:id'} element={<ItemDetailContainer/>} />
