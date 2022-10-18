@@ -17,7 +17,6 @@ const sumar = () => {
    }
   }
 
-
   return (
     <div>
       <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', width:'30%'}}> 
