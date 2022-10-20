@@ -7,6 +7,7 @@ import './App.css';
 import ItemDetailContainer from './components/shop/ItemDetailContainer';
 import InputEvents from './components/InputEvents';
 import Order from './components/shop/Order';
+import ListContainer from './components/firebase/ListContainer';
 
  
 
@@ -19,12 +20,14 @@ function App() {
      <BrowserRouter>
         <NavBar/>
         <Routes>
-          <Route path={'/Order'} element={<Order/>} />
+          
           <Route path={'/Input'} element={<InputEvents/>} />
+          <Route path={'/firebase'} element={<ListContainer/>} />
           <Route path={'/'} element={<ItemListContainer/>} />
           <Route path={'/category/:id'} element={<ItemListContainer/>} />
           <Route path={'/item/:id'} element={<ItemDetailContainer/>} />
           <Route path={'/shop'} element={<ItemListContainer/>}/> 
+          <Route path={'/shop/'} element={<Order/>} />
           <Route path={'*'} element={<Error404/>} />
         </Routes>
         <Footer/>  

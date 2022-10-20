@@ -1,15 +1,15 @@
-import react from 'react'
+import React from 'react'
 
 const Order = () => {
     
-    const items = [ 'Playstation', 'xbox', 'monitores' ]
+    const items = [ 'Playstation', 'monitores' ]
 
     const putOrder = () => {
-        const user = {name:'', phone:'', email:''}
+        const user = {name:'Sara Garcia', phone:'1159295109', email:'sarara@gmail.com'}
         const Order = {
             buyer: user,
             items: items,
-            total: 3
+            total: 2
         }
 console.log(Order);
     }

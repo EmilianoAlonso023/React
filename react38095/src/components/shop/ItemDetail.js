@@ -9,7 +9,7 @@ const ItemDetail = ({item}) => {
 
   return (
     <div>
-        <div>{ ItemCount }</div>
+       
         <div>{ item.name }</div>
         <div>{ item.price }</div>
         <ItemCount stock={item.stock} onAdd={onAdd}/>
