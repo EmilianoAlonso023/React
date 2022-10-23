@@ -1,12 +1,13 @@
 import './App.css'; 
  import NavBar from './components/NavBar';
- import ItemListContainer from './components/shop/ItemListContainer'; 
+ import ItemListContainer from './components/ItemListContainer'; 
  import Footer from './components/Footer';
  import { BrowserRouter, Route, Routes } from 'react-router-dom';
  import Error404 from './components/Error404';
-import ItemDetailContainer from './components/shop/ItemDetailContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemDetail from './components/ItemDetail';
 import InputEvents from './components/InputEvents';
-import Order from './components/shop/Order';
+import Order from './components/Order';
 import ListContainer from './components/firebase/ListContainer';
 import {CartProVider} from './context/CartContext'
  
@@ -25,8 +26,8 @@ function App() {
           <Route path={'/'} element={<ItemListContainer/>} />
           <Route path={'/category/:id'} element={<ItemListContainer/>} />
           <Route path={'/item/:id'} element={<ItemDetailContainer/>} />
-          <Route path={'/shop'} element={<ItemListContainer/>}/> 
-          <Route path={'/shop/order'} element={<Order/>} />
+          <Route path={'/components'} element={<ItemListContainer/>}/> 
+          <Route path={'/order'} element={<Order/>} />
           <Route path={'*'} element={<Error404/>} />
           </Routes>
          <Footer/>  

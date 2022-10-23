@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import ItemCount from '../ItemCount' 
-import { useCart } from '../../context/CartContext'
+import ItemCount from './ItemCount' 
+import { useCart } from '../context/CartContext'
 
 
 
-const{addToCart} = useCart ()
+
+/*  const{addToCart} = useCart () 
 const ItemDetail = ({item}) => {
   const onAdd = () => {
     addToCart(item)
@@ -18,7 +19,7 @@ const ItemDetail = ({item}) => {
         <ItemCount stock={item.stock} onAdd={onAdd}/>
     </div>
   )
-}
+} */
   
 
 export default ItemDetail
