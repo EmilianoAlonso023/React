@@ -8,7 +8,7 @@ import ItemDetailContainer from './components/shop/ItemDetailContainer';
 import InputEvents from './components/InputEvents';
 import Order from './components/shop/Order';
 import ListContainer from './components/firebase/ListContainer';
-
+import {CartProVider} from './context/CartContext'
  
 
 
@@ -16,11 +16,10 @@ function App() {
 
   const styles = {padding: '10px'}
   return (
-  
+    <CartProVider>
      <BrowserRouter>
         <NavBar/>
         <Routes>
-          
           <Route path={'/Input'} element={<InputEvents/>} />
           <Route path={'/firebase'} element={<ListContainer/>} />
           <Route path={'/'} element={<ItemListContainer/>} />
@@ -29,10 +28,10 @@ function App() {
           <Route path={'/shop'} element={<ItemListContainer/>}/> 
           <Route path={'/shop/order'} element={<Order/>} />
           <Route path={'*'} element={<Error404/>} />
-        </Routes>
-        <Footer/>  
-      </BrowserRouter>
-    
+          </Routes>
+         <Footer/>  
+        </BrowserRouter>
+        </CartProVider>
 
     
   );

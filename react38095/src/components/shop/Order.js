@@ -16,7 +16,7 @@ console.log(order);
   return (
     <div>
         <h1 className='text-5xl'>Orden</h1>
-        {items.map ( i => <li>(i)</li> )}
+        {items.map ( i => <li key={i}>{i}</li> )}
         <button className='btn' onClick={putOrder}>Levantar orden</button>
         </div>
   )

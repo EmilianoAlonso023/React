@@ -1,6 +1,11 @@
+import React from "react" //
 import { Link } from "react-router-dom"
+import { useCart } from "../context/CartContext"
 
 const NavBar = () => {
+  const {cart} = useCart()
+  console.log (cart)
+  
     return (
       <div className="navbar bg-base-100">
       

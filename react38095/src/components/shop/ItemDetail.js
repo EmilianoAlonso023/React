@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItemCount from '../ItemCount' 
+import { useCart } from '../../context/CartContext'
 
 
+
+const{addToCart} = useCart ()
 const ItemDetail = ({item}) => {
   const onAdd = () => {
-    console.log('compraste')
+    addToCart(item)
   }
 
   return (
@@ -16,4 +19,6 @@ const ItemDetail = ({item}) => {
     </div>
   )
 }
+  
+
 export default ItemDetail
