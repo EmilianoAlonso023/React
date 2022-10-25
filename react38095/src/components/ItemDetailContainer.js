@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-
+import { db } from '../index'
 import ItemDetail from '../components/ItemDetail'
+import { doc, getDoc } from 'firebase/firestore'
 
-const ItemListContainer = ({ greeting }) => {
-  const [items, setItems] = useState([]);
-  const { categoryId } = useParams()
+const ItemDetailContainer = ({ greeting }) => {
+  const [item, setItem] = useState([]);
+  const { id } = useParams()
 
 useEffect(() => {
       const getProducto = async () => {

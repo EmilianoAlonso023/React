@@ -1,6 +1,7 @@
-import React from "react" //
+import React from "react" 
 import { Link } from "react-router-dom"
 import { useCart } from "../context/CartContext"
+import CartWidget from "./CartWidget/CartWidget"
 
 const NavBar = () => {
   const {cart} = useCart()
@@ -52,6 +53,7 @@ const NavBar = () => {
                 <span className="badge"></span>
               </a>
             </li>
+            <CartWidget/>
             <li><a>Configuracion</a></li>
             <li><a>Cerrar sesion</a></li>
           </ul>
