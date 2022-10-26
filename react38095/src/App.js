@@ -9,7 +9,8 @@ import ItemDetail from './components/ItemDetail';
 import InputEvents from './components/InputEvents';
 import Order from './components/Order';
 import ListContainer from './components/firebase/ListContainer';
-import {CartProVider} from './context/CartContext'
+import {CartProvider} from './context/CartContext'
+import Products from './components/Products'
  
 
 
@@ -17,7 +18,7 @@ function App() {
 
   const styles = {padding: '10px'}
   return (
-    <CartProVider>
+    <CartProvider>
      <BrowserRouter>
         <NavBar/>
         <Routes>
@@ -32,7 +33,7 @@ function App() {
           </Routes>
          <Footer/>  
         </BrowserRouter>
-        </CartProVider>
+        </CartProvider>
 
     
   );
