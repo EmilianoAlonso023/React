@@ -6,8 +6,8 @@ import { useCart } from '../context/CartContext'
 
 const ItemDetail = ({item}) => {
   const{addToCart} = useCart () 
-  const onAdd = () => {
-    addToCart(item)
+  const onAdd = (cantidad) => {
+    addToCart(item, cantidad)
   }
 
   return (

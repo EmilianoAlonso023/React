@@ -29,7 +29,7 @@ const sumar = () => {
       <button
       onClick={restar}>-</button>
       </div>
-      <button onClick={onAdd}>Comprar</button>
+      <button onClick={()=>onAdd(counter)}>Comprar</button>
       </div>
 
   )

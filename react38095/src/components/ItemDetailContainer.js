@@ -10,7 +10,7 @@ const ItemDetailContainer = ({ greeting }) => {
 
 useEffect(() => {
       const getProducto = async () => {
-        const queryRef = doc(db, "products", id);
+        const queryRef = doc(db, "items", id);
         const response = await getDoc(queryRef);
         const newItem = {
           id: response.id,
