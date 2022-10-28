@@ -25,7 +25,7 @@ function App() {
           <Route path={'/Input'} element={<InputEvents/>} />
           <Route path={'/firebase'} element={<ListContainer/>} />
           <Route path={'/'} element={<ItemListContainer/>} />
-          <Route path={'/category/:id'} element={<ItemListContainer/>} />
+          <Route path={'/category/:categoryId'} element={<ItemListContainer/>} />
           <Route path={'/item/:id'} element={<ItemDetailContainer/>} />
           <Route path={'/components'} element={<ItemListContainer/>}/> 
           <Route path={'/order'} element={<Order/>} />

@@ -1,6 +1,6 @@
 import ItemList from "./ItemList"
 import React, { useEffect, useState } from "react"
-import { getProducts } from "./Products" 
+/* import { getProducts } from "./Products"  */
 import { useParams } from "react-router-dom"
 import { db } from '../index'
 import { collection, getDocs, query, where } from "firebase/firestore"
