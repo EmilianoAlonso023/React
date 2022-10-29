@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { doc, getDoc, getFirestore } from "firebase/firestore";
-import { redirect } from 'react-router-dom';
+
 
 
 const ListContainer = () => {

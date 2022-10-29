@@ -11,8 +11,6 @@ import Order from './components/Order';
 import ListContainer from './components/firebase/ListContainer';
 import {CartProvider} from './context/CartContext'
 import Products from './components/Products'
- 
-
 
 function App() {
 
